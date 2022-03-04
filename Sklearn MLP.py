@@ -22,7 +22,7 @@ input = scaler.transform(input)
 
 input_train, input_test, output_train, output_test = train_test_split(input, output, test_size = 0.3, random_state = 0)
 clf = MLPRegressor(
-    hidden_layer_sizes = (20,30,10),activation = 'relu',
+    hidden_layer_sizes = (20,40,10),activation = 'relu',
     solver = 'sgd', alpha = 1e-4, batch_size = 400,
     learning_rate = 'constant', learning_rate_init=1e-4,
     power_t=0.5, max_iter=5000, shuffle=True,

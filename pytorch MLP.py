@@ -16,17 +16,22 @@ class Model(nn.Module):
             nn.ReLU())
         
         self.fc2 = nn.Sequential(
-            nn.Linear(20, 30)
+            nn.Linear(20, 40)
             )
        
-        self.fc2 = nn.Sequential(
-            nn.Linear(30, 1)
+        self.fc3 = nn.Sequential(
+            nn.Linear(40, 10)
+            )
+        
+        self.fc4 = nn.Sequential(
+            nn.Linear(10, 1)
             )
         
     def forward(self, x):
         y = self.fc1(x)
         y = self.fc2(y)
         y = self.fc3(y)
+        y = self.fc4(y)
         return y
          
 def train(data, testData, mean, std):
